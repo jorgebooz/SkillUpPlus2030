@@ -16,7 +16,7 @@ export default function RegisterScreen() {
     name: '', email: '', password: '', confirmPassword: '' 
   });
 
-  const navigation = useNavigation<any>(); // Usar any aqui também
+  const navigation = useNavigation<any>(); 
 
   const validateForm = () => {
     const newErrors = { name: '', email: '', password: '', confirmPassword: '' };
@@ -37,7 +37,6 @@ export default function RegisterScreen() {
     
     setLoading(true);
     
-    // Simulação de cadastro
     setTimeout(() => {
       setLoading(false);
       navigation.navigate('Login');

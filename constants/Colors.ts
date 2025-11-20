@@ -1,7 +1,7 @@
 export const Colors = {
   // Cores principais
   primary: {
-    yellow: '#F2CD00',    // Textos destacados & links
+    yellow: '#F2CD00',    
     aqua: '#007D8A',      // Botões
     gray: '#191919',      // Textos principais
     white: '#FFFFFF',     // Fundos
