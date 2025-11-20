@@ -14,8 +14,14 @@ Oferecer uma plataforma móvel para:
 
 ---
 
-## 🎨 Design System
+## 👥 Integrantes do Projeto
 
+- **Caio Hideki** — RM553630  
+- **Jorge Booz** — RM552700  
+- **Mateus Tibão** — RM553267
+---
+
+## 🎨 Design System
 ### 🎨 Paleta de Cores
 - 🟡 **Amarelo Principal:** `#F2CD00` (textos destacados, headers)  
 - 🔵 **Azul Aqua:** `#007D8A` (botões, elementos interativos)  
