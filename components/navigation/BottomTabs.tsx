@@ -1,23 +1,15 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
-import { Colors } from './constants/Colors';
-import { UserProvider } from './contexts/UserContext';
+import { Colors } from '@/constants/Colors';
+import DashboardScreen from '@/app/screens/dashboard';
+import CoursesScreen from '@/app/screens/courses';
+import ProgressScreen from '@/app/screens/progress';
+import ProfileScreen from '@/app/screens/profile';
 
-// Importar telas
-import LoginScreen from './app/screens/login';
-import RegisterScreen from './app/screens/register';
-import DashboardScreen from './app/screens/dashboard';
-import CoursesScreen from './app/screens/courses';
-import ProgressScreen from './app/screens/progress';
-import ProfileScreen from './app/screens/profile';
-
-const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
-function TabNavigator() {
+export default function BottomTabs() {
   return (
     <Tab.Navigator
       screenOptions={{
@@ -70,41 +62,5 @@ function TabNavigator() {
         }}
       />
     </Tab.Navigator>
-  );
-}
-
-export default function App() {
-  return (
-    <UserProvider>
-      <NavigationContainer>
-        <Stack.Navigator
-          screenOptions={{
-            headerStyle: {
-              backgroundColor: Colors.primary.yellow,
-            },
-            headerTintColor: Colors.primary.white,
-            headerTitleStyle: {
-              fontWeight: 'bold',
-            },
-          }}
-        >
-          <Stack.Screen 
-            name="Login" 
-            component={LoginScreen}
-            options={{ headerShown: false }} 
-          />
-          <Stack.Screen 
-            name="Register" 
-            component={RegisterScreen}
-            options={{ title: 'Criar Conta' }} 
-          />
-          <Stack.Screen 
-            name="Main" 
-            component={TabNavigator}
-            options={{ headerShown: false }} 
-          />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </UserProvider>
   );
 }
